@@ -1,0 +1,56 @@
+body {
+	margin-top: 0;
+}
+
+#navbar {
+	background-color: white;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+
+#navbar hr {
+	margin-bottom: 0;
+}
+
+nav {
+	display: flex;
+	height: 100%;
+}
+
+nav h1 {
+	color: black;
+}
+
+nav ul {
+	list-style: none;
+	/** Safari hack, see https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html **/
+	list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 30px;
+}
+
+nav li {
+	display: inline-block;
+	text-align: center;
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--gray);
+	transition: color 0.2s ease;
+}
+
+nav a:focus,
+nav a:hover,
+nav li[aria-current] a:focus,
+nav li[aria-current] a:hover {
+	color: var(--dark-blue);
+}
+
+.current-nav {
+	text-decoration: underline 2px var(--dark-blue);
+}

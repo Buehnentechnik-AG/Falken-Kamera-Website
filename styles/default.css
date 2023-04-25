@@ -1,0 +1,10 @@
+:root {
+	--dark-blue: #003397;
+	--light-blue: #8787ff;
+	--gray: #5b5f6a;
+}
+
+html {
+	font-family: verdana;
+	color: var(--gray);
+}

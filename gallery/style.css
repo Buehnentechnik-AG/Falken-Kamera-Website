@@ -1,0 +1,16 @@
+#gallery {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#gallery .img {
+	margin: 4px;
+	flex: 0 1 calc(20% - 8px);
+}
+
+#gallery .img img {
+	height: 100%;
+	width: 100%;
+}
