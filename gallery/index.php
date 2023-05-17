@@ -29,10 +29,10 @@
 
             $dir = __DIR__ . DIRECTORY_SEPARATOR . "images" . DIRECTORY_SEPARATOR;
             $images = glob("$dir*.{jpg,jpeg,gif,png,bmp,webp}", GLOB_BRACE);
-
+	    natsort($images);
             foreach (array_reverse($images) as $i) {
                 echo ('<div class="img">');
-                printf("<img class='zoomable' src='images/%s'/>", basename($i));
+                printf("<img class='zoomable' src='images/%s' loading='lazy'/>", basename($i));
                 echo ('</div>');
             }
 
@@ -40,7 +40,7 @@
 
         </div>
     </div>
-
+    <p>Hinweis: Die Bilder der Galerie werden automatisch nach 3 Tagen gelöscht.</p>
     <script src="../scripts/fullscreen.js"></script>
     <script src="../scripts/navbar.js"></script>
 </body>
